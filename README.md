@@ -18,3 +18,8 @@
 ### 具体流程参考： http://saas.liangdabiao.com/archives/1482
 
 ### 代码参考： https://github.com/hassancs91/AI-Marketing-Army-Tester
+
+
+### thum.io 服务 ： 浏览器生成截图
+### https://image.thum.io/get/fullpage/https://eleduck.com/  全图
+### https://image.thum.io/get/fullpage/iphoneX/https://eleduck.com/  移动端效果
