@@ -1,0 +1,7 @@
+部署方法：
+https://zhuanlan.zhihu.com/p/22678445
+
+gunicorn -w 4 -b 0.0.0.0:3000 --timeout 180 wsgi:app
+
+curl -X POST http://127.0.0.1:3000/analyze_image -d '{"image_url":"https://juejin.cn/post/6934007551755304974"
+}' -H "Content-Type: application/json"

@@ -1,7 +1,9 @@
-from openai import OpenAI
+# from openai import OpenAI
+import openai
 import instructor
+ 
 
-client = OpenAI(api_key="sk-xxx")
+client = openai.Client(api_key="sk-JXLXW5xPfdTC0QyuTHyutTYsDA8D7YgYx2AHwWgyRfd9sB",base_url="https://api.chatanywhere.com.cn/v1/")
 
 import instructor
 instructor.patch(client)

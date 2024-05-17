@@ -13,33 +13,19 @@ def main():
 
     # Provide an introduction or instructions for the user
     st.write("Welcome to the Landing Page Analyzer. Please provide an image of a landing page in one of the following ways for analysis.")
-
-    # Option for users to select the method of providing the image
-    method = st.radio("Choose your method to provide the image:",
-                      ('Public URL', 'URL to Capture'))
-
+    
     # Initialize a variable for the image URL
     image_url = None
 
-    # Depending on the method chosen, provide different input options
-    if method == 'Public URL':
-        # Input for public URL
-        public_url = st.text_input("Enter the public URL of the image:")
-        if public_url:
-            image_url = public_url
+    public_url = st.text_input("Enter the Page URL of Landing Page:")
+    if public_url:
+        image_url = public_url
 
-    elif method == 'URL to Capture':
-        # Input for URL to capture
-        capture_url = st.text_input("Enter the URL to capture the webpage:")
-        if capture_url:
-            # Capture the webpage as an image
-            captured_image_path = web_screenshot.capture_web_page_image(capture_url, "screenshot_test.jpg")
-            image_url = web_screenshot.upload_to_imgur(captured_image_path)
 
     # Button to start analysis
     if st.button("Analyze Image") and image_url:
         # Call the function to analyze the image
-        analyze_image(image_url)
+        analyze_image("https://image.thum.io/get/fullpage/"+image_url)
 
 # Function to analyze the image
 def analyze_image(image_url):
