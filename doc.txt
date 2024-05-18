@@ -1,7 +1,14 @@
 部署方法：
 https://zhuanlan.zhihu.com/p/22678445
 
-gunicorn -w 4 -b 0.0.0.0:3000 --timeout 180 wsgi:app
+使用方法：
+修改 openai_function的 gpt4 的代理地址和key，按自己的实际情况输入
 
+执行：
+gunicorn -w 4 -b 0.0.0.0:3000 --timeout 180 wsgi:app
+nohup gunicorn -w 4 -b 0.0.0.0:3000 wsgi:app > test,log 2>&1 & 
+
+测试：
 curl -X POST http://127.0.0.1:3000/analyze_image -d '{"image_url":"https://juejin.cn/post/6934007551755304974"
 }' -H "Content-Type: application/json"
+
