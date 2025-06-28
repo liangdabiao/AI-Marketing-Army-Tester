@@ -1,0 +1,120 @@
+<div id="text-generation-tool">
+    <input type="text" id="topic" placeholder="Your Topic...">
+<select id="topic">
+        <option value="" selected disabled>Your Topic...</option>
+        <option value="love">Love</option>
+        <option value="help">Help</option>
+        <option value="friendship">Friendship</option>
+    </select>
+    <button id="generate-button">Generate Story!</button>
+    <div id="result-container" style="display: none;">
+        <div class="result-wrapper">
+            <div class="result-content">
+                <textarea id="result" readonly></textarea>
+            </div>
+            <div class="copy-button-container">
+                <button id="copy-button">Copy</button>
+            </div>
+        </div>
+    </div>
+    <div id="loading" class="loader" style="display: none;"></div>
+</div>
+
+<style>
+    /* Basic styles for the text generation tool */
+    #text-generation-tool {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+    }
+
+    #topic {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    #generate-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #3498db;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #generate-button:hover {
+        background-color: #2980b9;
+    }
+
+    #result-container {
+        display: none;
+        margin-bottom: 20px;
+    }
+
+    .result-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .result-content {
+        display: flex;
+    }
+
+    #result {
+        flex: 1;
+        height: 400px;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+    }
+
+    .copy-button-container {
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    #copy-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #3498db;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #copy-button:hover {
+        background-color: #2980b9;
+    }
+
+    /* CSS for the loader */
+    .loader {
+        display: block;
+        margin: 50px auto;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
